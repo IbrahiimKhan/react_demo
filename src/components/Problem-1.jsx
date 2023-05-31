@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import "../style.css"
 
 const Problem1 = () => {
     const [show, setShow] = useState('all');

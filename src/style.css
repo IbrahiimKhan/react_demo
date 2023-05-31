@@ -1,0 +1,23 @@
+button.btn.btn-lg.button_1.btn-outline-primary {
+    color: #46139f !important;
+}
+
+button.btn.button_2.btn-lg.btn-outline-warning {
+    color: #ff7f90;
+}
+
+
+button.btn.button_1.btn-secondary.me-3 {
+    color: #46139f !important;
+    background-color: white !important;
+}
+
+button.btn.button_2.btn-secondary.me-3 {
+    color: #ff7f90;
+    background-color: white !important;
+}
+
+button.btn.close.btn-secondary.m3-3 {
+    background-color: white !important;
+    color: #46139f !important;
+}

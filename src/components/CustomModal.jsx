@@ -17,6 +17,9 @@ const CustomModal = ({ allcontacts, usContact, status }) => {
     useEffect(() => {
         setselectedBtn(status)
     }, [])
+    useEffect(() => {
+        setselectedBtn(status)
+    }, [status])
 
     //filtered data
 
@@ -31,7 +34,7 @@ const CustomModal = ({ allcontacts, usContact, status }) => {
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Contact List</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">{selectedBtn == "all" ? "Modal A" : "Modal B"}</h5>
 
                         </div>
                         <div className="modal-body">

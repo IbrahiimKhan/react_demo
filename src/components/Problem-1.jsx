@@ -34,23 +34,13 @@ const Problem1 = () => {
         active: 1,
         complete: 2,
         pending: 3,
-
     };
 
     const filteredItems = items.filter((item) => show === 'all' || show === item.status);
 
-    const sortedItems = [...filteredItems].sort((a, b) => {
-        const statusA = a.status.toLowerCase();
-        const statusB = b.status.toLowerCase();
+    const sortedItems = filteredItems.sort((a, b) => a.status.localeCompare(b.status))
+    console.log("sortedArr", sortedItems)
 
-        if (statusOrder[statusA] < statusOrder[statusB]) {
-            return -1;
-        } else if (statusOrder[statusA] > statusOrder[statusB]) {
-            return 1;
-        } else {
-            return 0;
-        }
-    });
     return (
         <div className="container">
             <div className="row justify-content-center mt-5">

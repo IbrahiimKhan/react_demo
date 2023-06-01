@@ -5,10 +5,11 @@ import "../style.css"
 CustomModal
 const Problem2 = () => {
     const navigate = useNavigate()
+    //state varibales
     const [contacts, setContacts] = useState([])
     const [usaContacts, setUsaContacts] = useState([])
     const [selectedButton, setSelectedButton] = useState(null);
-
+    //get all contacts
     async function getContactList() {
         try {
             const response = await fetch('https://contact.mediusware.com/api/contacts/')
@@ -20,7 +21,7 @@ const Problem2 = () => {
             console.error(error);
         }
     }
-
+    //get specific contacts
     async function getContactListByCountry() {
         try {
             const response = await fetch('https://contact.mediusware.com/api/country-contacts/United%20States/')
@@ -32,7 +33,7 @@ const Problem2 = () => {
             console.error(error);
         }
     }
-
+    //handling clicks
     const handleAllContactsClick = () => {
         setSelectedButton('all');
         navigate('/all');

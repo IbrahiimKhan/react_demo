@@ -3,11 +3,13 @@ import { useEffect } from 'react';
 import "../style.css"
 
 const Problem1 = () => {
+    //states
     const [show, setShow] = useState('all');
     const [name, setName] = useState('');
     const [status, setStatus] = useState('');
     const [items, setItems] = useState([]);
 
+    //handling click
     const handleClick = (val) => {
         setShow(val);
     };
@@ -35,9 +37,9 @@ const Problem1 = () => {
         complete: 2,
         pending: 3,
     };
-
+    //filtering element
     const filteredItems = items.filter((item) => show === 'all' || show === item.status);
-
+    //sorting elements
     const sortedItems = filteredItems.sort((a, b) => a.status.localeCompare(b.status))
     console.log("sortedArr", sortedItems)
 

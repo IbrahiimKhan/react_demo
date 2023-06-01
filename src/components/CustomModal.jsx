@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import "../style.css"
 const CustomModal = ({ allcontacts, usContact, status }) => {
+    //state variables
     const [singleItem, setSingleItem] = useState()
     const [inputval, setInputval] = useState("")
     const [checked, setChecked] = useState(false)
     const [selectedBtn, setselectedBtn] = useState(null)
 
-
+    //handling single contact
     const handlesingleContact = (item) => {
         setSingleItem(item)
     }
